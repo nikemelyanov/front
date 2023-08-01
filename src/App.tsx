@@ -1,19 +1,21 @@
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
 import PrivateRoute from './utils/router/PrivateRoute';
 import Home from './pages/home';
-import Login from './pages/auth/login';
+import LoginPage from './pages/auth/login';
+import RegisterPage from './pages/auth/register';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Routes>
         <Route element={<PrivateRoute />}>
-          <Route path='/' element={<Home />}/>
+          <Route path="/" element={<Home />} />
         </Route>
 
-        <Route path='login' element={<Login />}/>
+        <Route path="login" element={<LoginPage />} />
+        <Route path="register" element={<RegisterPage />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
