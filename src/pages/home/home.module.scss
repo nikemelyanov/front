@@ -1,5 +1,73 @@
 .main {
-    width: 1440px;
-    min-height: 100vh;
-    margin: 0 auto;
+  width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  border-radius: 30px;
+  border: 1px solid rgb(238, 238, 238);
+  padding: 30px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  .logo {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+  }
+  .userInfo {
+    font-size: 17px;
+    margin-left: 10px;
+  }
+}
+
+.container {
+  margin-top: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  .menu {
+    ul {
+      list-style-type: none;
+      li {
+        margin-bottom: 15px;
+        a {
+          transition: 0.15s;
+          color: rgba(0, 0, 0, 0.6);
+          text-decoration: none;
+        }
+        a:hover {
+          color: rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
+  }
+  .postBox {
+    width: 80%;
+    .post {
+      width: 90%;
+      margin-bottom: 50px;
+      .postContainer {
+        margin-bottom: 10px;
+
+        display: flex;
+        align-items: center;
+        .postLogo {
+          width: 40px;
+          height: 40px;
+          background-color: black;
+        }
+        .postTitle {
+          margin-left: 10px;
+        }
+      }
+      .postDate {
+        margin-bottom: 20px;
+        opacity: 0.6;
+      }
+      .postBody {
+        line-height: 1.5;
+      }
+    }
+  }
 }
