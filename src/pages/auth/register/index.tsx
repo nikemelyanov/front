@@ -1,6 +1,7 @@
+import axios from 'axios';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './register.module.scss'
+import styles from './register.module.scss';
 
 const RegisterPage = () => {
   const [email, setEmail] = React.useState('');
@@ -13,11 +14,22 @@ const RegisterPage = () => {
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
+
+    axios
+      .post('http://localhost:4000/auth/register', {
+        email: email,
+        password: password,
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (
     <div className={styles.main}>
-      <h1 className={styles.mainTitle}><span>RE</span>TWITTz</h1>
+      <h1 className={styles.mainTitle}>
+        <span>RE</span>TWITTz
+      </h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type="email"

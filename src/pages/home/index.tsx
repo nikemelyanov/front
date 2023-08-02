@@ -1,14 +1,14 @@
 import styles from './home.module.scss';
 
-import image from '../../assets/img/1.png'
-import image3 from '../../assets/img/3.png'
-import image7 from '../../assets/img/7.png'
+import image from '../../assets/img/1.png';
+import image3 from '../../assets/img/3.png';
+import image7 from '../../assets/img/7.png';
 
 export default function Home() {
   return (
     <div className={styles.main}>
       <div className={styles.user}>
-      <img className={styles.logo} src={image7} alt='userImages' />
+        <img className={styles.logo} src={image7} alt="userImages" />
         <div className={styles.userInfo}>Nikita Emelyanov</div>
       </div>
       <div className={styles.container}>
@@ -32,7 +32,7 @@ export default function Home() {
         <div className={styles.postBox}>
           <div className={styles.post}>
             <div className={styles.postContainer}>
-              <img className={styles.postLogo} src={image} alt='userImages' />
+              <img className={styles.postLogo} src={image} alt="userImages" />
               <h1 className={styles.postTitle}>New features NODE JS</h1>
             </div>
             <div className={styles.postDate}>01.08.23 Moscow</div>
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
           <div className={styles.post}>
             <div className={styles.postContainer}>
-            <img className={styles.postLogo} src={image} alt='userImages' />
+              <img className={styles.postLogo} src={image} alt="userImages" />
               <h1 className={styles.postTitle}>Learn SQL</h1>
             </div>
             <div className={styles.postDate}>28.07.23 Moscow</div>
@@ -61,7 +61,7 @@ export default function Home() {
           </div>
           <div className={styles.post}>
             <div className={styles.postContainer}>
-            <img className={styles.postLogo} src={image3} alt='userImages' />
+              <img className={styles.postLogo} src={image3} alt="userImages" />
               <h1 className={styles.postTitle}>2023 frontend frameworks</h1>
             </div>
             <div className={styles.postDate}>27.07.23 Moscow</div>
