@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import styles from './register.module.scss'
 
 const RegisterPage = () => {
   const [email, setEmail] = React.useState('');
@@ -15,8 +16,9 @@ const RegisterPage = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className={styles.main}>
+      <h1 className={styles.mainTitle}><span>RE</span>TWITTz</h1>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type="email"
           placeholder="Email"

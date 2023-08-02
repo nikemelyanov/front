@@ -15,7 +15,7 @@ export default function Home() {
         <div className={styles.menu}>
           <ul>
             <li>
-              <a href="#">Articles of the month</a>
+              <a href="#">Top of the month</a>
             </li>
             <li>
               <a href="#">My posts</a>

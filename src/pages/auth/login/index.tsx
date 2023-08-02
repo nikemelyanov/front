@@ -33,7 +33,8 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
+    <div className={styles.main}>
+      <h1 className={styles.mainTitle}><span>RE</span>TWITTz</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type="email"
