@@ -27,7 +27,7 @@ const RegisterPage = () => {
 
   return (
     <div className={styles.main}>
-      <h1 className={styles.mainTitle}>
+      <h1 className={styles.logo}>
         <span>RE</span>TWITTz
       </h1>
       <form className={styles.form} onSubmit={handleSubmit}>

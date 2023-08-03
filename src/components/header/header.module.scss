@@ -1,0 +1,30 @@
+.header {
+  margin-bottom: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 15px;
+  span {
+    font-size: 45px;
+  }
+}
+
+.user {
+  height: 50px;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .userInfo {
+    font-size: 17px;
+    margin-left: 10px;
+  }
+}
