@@ -4,6 +4,11 @@ import image from '../../assets/img/1.png';
 import image3 from '../../assets/img/3.png';
 
 export default function PostList() {
+
+  // {posts.map(post => (
+  //   <li key={post.id}>{post.title}</li>
+  // ))}
+  
   return (
     <div className={styles.main}>
       <div className={styles.post}>
