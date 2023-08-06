@@ -8,8 +8,7 @@ import styles from "./home.module.scss";
 
 export default function Home() {
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    console.log(token);
+    
   }, []);
 
   const [switchPlus, setSwitchPlusPlus] = useState(false);
