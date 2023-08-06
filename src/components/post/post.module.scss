@@ -1,0 +1,24 @@
+.post {
+  width: 80%;
+  margin-bottom: 50px;
+  .postHeader {
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+    .avatar {
+      width: 40px;
+      height: 40px;
+    }
+    .title {
+      margin-left: 10px;
+    }
+  }
+  .date {
+    margin-bottom: 20px;
+    opacity: 0.6;
+  }
+  .body {
+    line-height: 1.5;
+  }
+}
