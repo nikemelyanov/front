@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Header() {
 
   const navigate = useNavigate();
+  
   function logout() {
     const token = localStorage.getItem('token')
     if (token) {

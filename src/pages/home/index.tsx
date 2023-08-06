@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from "react";
-import Bar from "../../components/bar";
-import Header from "../../components/header";
-import PostForm from "../../components/postForm";
-import PostList from "../../components/postList";
+import React, { useEffect, useState } from 'react';
+import Bar from '../../components/bar';
+import Header from '../../components/header';
+import PostForm from '../../components/postForm';
+import PostList from '../../components/postList';
 
-import styles from "./home.module.scss";
+import styles from './home.module.scss';
 
 export default function Home() {
   useEffect(() => {
-    
+    const token = localStorage.getItem('token');
+    if (token !== null) {
+      const tokenParts = token.split('.');
+      const userPayload = JSON.parse(atob(tokenParts[1]));
+    }
   }, []);
 
   const [switchPlus, setSwitchPlusPlus] = useState(false);
