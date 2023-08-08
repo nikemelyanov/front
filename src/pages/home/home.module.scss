@@ -12,48 +12,60 @@
   display: flex;
 }
 
-.plus {
-  cursor: pointer;
-  width: 37px;
-  height: 37px;
-  border-radius: 50%;
-  border: 1px solid black;
-  margin-bottom: 30px;
-  transition: 0.2s;
+.plusContainer {
+  margin-bottom: 50px;
 
-  position: relative;
+  display: flex;
+  align-items: center;
 
-  .plus1 {
-    height: 1px;
-    width: 15px;
-    background-color: black;
+  .plus {
+    cursor: pointer;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    border: 1px solid black;
+    transition: 0.2s;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+
+    .plus1 {
+      height: 1px;
+      width: 15px;
+      background-color: black;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .plus2 {
+      height: 15px;
+      width: 1px;
+      background-color: black;
+      transform: rotateY('90');
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
-  .plus2 {
-    height: 15px;
-    width: 1px;
-    background-color: black;
-    transform: rotateY("90");
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .plus:hover {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    .plus1 {
+      height: 2px;
+      transform: rotateY('30');
+    }
+    .plus2 {
+      width: 2px;
+      transform: rotateY('120');
+    }
   }
-}
 
-.plus:hover {
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  .plus1 {
-    height: 2px;
-    transform: rotateY("30");
-  }
-  .plus2 {
-    width: 2px;
-    transform: rotateY("120");
+  h3 {
+    font-weight: 300;
+    font-size: 17px;
+    padding-left: 20px;
   }
 }

@@ -5,17 +5,13 @@ export default function Bar() {
     <div className={styles.menu}>
       <ul>
         <li>
-          <a href="#">Top of the month</a>
+          <a href="#">Популярные ретвитсы</a>
         </li>
         <li>
-          <a href="#">Tell the world</a>
+          <a href="#">По вашим интересам</a>
         </li>
         <li>
-          <a href="#">Friends</a>
-        </li>
-
-        <li>
-          <a href="#">Recomendation</a>
+          <a href="#">Друзья</a>
         </li>
       </ul>
     </div>

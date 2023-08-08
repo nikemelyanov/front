@@ -21,10 +21,9 @@ export default function PostForm() {
 
   return (
     <form className={styles.postForm} onSubmit={handleSubmit}>
-      <h1 className={styles.title}>Tell the world something new:</h1>
       <input className={styles.postTitle} type="text" placeholder="title" value={title} onChange={(e) => setTitle(e.target.value)} />
       <input className={styles.postBody} type="text" placeholder="body" value={body} onChange={(e) => setBody(e.target.value)} />
-      <button type="submit">to publish</button>
+      <button type="submit">опубликовать</button>
     </form>
   );
 }
