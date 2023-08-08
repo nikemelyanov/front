@@ -1,9 +1,10 @@
 import styles from './header.module.scss';
-import image7 from '../../assets/img/7.png';
 import logoutImg from '../../assets/icons/logout.png';
 import { useNavigate } from 'react-router-dom';
 
-export default function Header() {
+import image1 from '../../assets/img/7.png';
+
+export default function Header(props: any) {
 
   const navigate = useNavigate();
   
@@ -22,8 +23,8 @@ export default function Header() {
       </h1>
 
       <div className={styles.user}>
-        <img className={styles.avatar} src={image7} alt="userImages" />
-        <div className={styles.userInfo}>Nikita Emelyanov</div>
+        <img className={styles.avatar} src={image1} alt="userImages" />
+        <div className={styles.userInfo}>{props.fisrtname + ' ' + props.lastname}</div>
         <img className={styles.logout} src={logoutImg} alt="logout" onClick={logout}/>
       </div>
     </div>

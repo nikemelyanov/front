@@ -29,6 +29,8 @@ const RegisterPage = () => {
       .catch((error) => {
         console.error(error);
       });
+
+    navigateToLogin();
   };
 
   return (
@@ -39,13 +41,13 @@ const RegisterPage = () => {
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Firstname"
+          placeholder="Имя - не используйте кириллицу (временно)."
           value={firstname}
           onChange={(e) => setFirstname(e.target.value)}
         />
         <input
           type="text"
-          placeholder="Lastname"
+          placeholder="Фамилия - не используйте кириллицу (временно)."
           value={lastname}
           onChange={(e) => setLastname(e.target.value)}
         />
@@ -57,13 +59,13 @@ const RegisterPage = () => {
         />
         <input
           type="password"
-          placeholder="password"
+          placeholder="Пароль"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         <input
           type="text"
-          placeholder="avatar"
+          placeholder="Аватар"
           value={avatar}
           onChange={(e) => setAvatar(e.target.value)}
         />
