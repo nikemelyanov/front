@@ -21,7 +21,7 @@ export default function PostList() {
 
   function renderPosts() {
     return posts.map((post: any) => (
-      <Post key={post.id} title={post.title} body={post.body} />
+      <Post key={post.id} title={post.title} body={post.body} author={post.author} date={post.date} />
     ));
   }
 

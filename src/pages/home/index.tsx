@@ -9,7 +9,7 @@ import styles from './home.module.scss';
 export default function Home() {
   const [payload, setPayload] = useState({
     firstname: '',
-    lastname: '', 
+    lastname: '',
     avatar: '',
   });
 
@@ -17,7 +17,9 @@ export default function Home() {
     const token = localStorage.getItem('token');
     if (token !== null) {
       const tokenParts = token.split('.');
-      const userPayload = JSON.parse(decodeURIComponent(window.atob(tokenParts[1])));
+      const userPayload = JSON.parse(
+        decodeURIComponent(window.atob(tokenParts[1]))
+      );
       setPayload(userPayload);
     }
   }, []);

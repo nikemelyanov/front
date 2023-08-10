@@ -10,13 +10,17 @@
       width: 40px;
       height: 40px;
     }
+    .author {
+      word-wrap: break-word;
+      margin: 0px 10px;
+    }
     .title {
-      margin-left: 10px;
+      
     }
   }
   .date {
     margin-bottom: 20px;
-    opacity: 0.6;
+    opacity: 0.6; 
   }
   .body {
     line-height: 1.5;
