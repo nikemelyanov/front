@@ -10,7 +10,6 @@ export default function PostForm() {
     e.preventDefault();
 
     const token = localStorage.getItem('token')
-    console.log(token)
     axios
       .post(
         'http://localhost:4000/posts/addPost',
@@ -34,14 +33,13 @@ export default function PostForm() {
       <input
         className={styles.postTitle}
         type="text"
-        placeholder="title"
+        placeholder="Заголовок"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
       <input
         className={styles.postBody}
         type="text"
-        placeholder="body"
         value={body}
         onChange={(e) => setBody(e.target.value)}
       />

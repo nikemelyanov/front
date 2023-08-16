@@ -15,14 +15,29 @@
       margin: 0px 10px;
     }
     .title {
-      
+      font-size: 27px;
     }
-  }
-  .date {
-    margin-bottom: 20px;
-    opacity: 0.6; 
   }
   .body {
     line-height: 1.5;
+  }
+  .postBottom {
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .date {
+      opacity: 0.6;
+    }
+    .likes {
+      cursor: pointer;
+      width: 21px;
+    }
+    .chat {
+      cursor: pointer;
+      width: 21px;
+      margin-left: 10px;
+    }
   }
 }
