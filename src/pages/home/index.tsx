@@ -14,13 +14,17 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token !== null) {
-      const tokenParts = token.split('.');
-      const userPayload = JSON.parse(
-        decodeURIComponent(window.atob(tokenParts[1]))
-      );
-      setPayload(userPayload);
+    try {
+      const token = localStorage.getItem('token');
+      if (token !== null) {
+        const tokenParts = token.split('.');
+        const userPayload = JSON.parse(
+          decodeURIComponent(window.atob(tokenParts[1]))
+        );
+        setPayload(userPayload);
+      }
+    } catch (err) {
+      console.log(err);
     }
   }, []);
 
