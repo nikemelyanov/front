@@ -16,7 +16,7 @@ export default function Post(props: any) {
   return (
     <div className={styles.post}>
       <div className={styles.postHeader}>
-        <img className={styles.avatar} src={image} alt="userImages" />
+        <img className={styles.avatar} src={`http://localhost:4000/images/${props.avatar}`} alt="userImages" />
         <p className={styles.author}>{props.author}</p>
         <h1 className={styles.title}>{props.title}</h1>
       </div>
