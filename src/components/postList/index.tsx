@@ -22,6 +22,7 @@ export default function PostList() {
         key={post.id}
         title={post.title}
         body={post.body}
+        avatar={post.avatar}
         author={post.author}
         date={post.date}
       />
