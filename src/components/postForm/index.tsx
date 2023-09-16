@@ -2,14 +2,14 @@ import axios from 'axios';
 import { useState } from 'react';
 import styles from './postForm.module.scss';
 
-export default function PostForm() {
+export default function PostForm(props: any) {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
-    const token = localStorage.getItem('token')
+    const token = localStorage.getItem('token');
     axios
       .post(
         'http://localhost:4000/posts/addPost',
@@ -25,6 +25,11 @@ export default function PostForm() {
       )
       .catch((error) => {
         console.error(error);
+      })
+      .then(() => {
+        props.tapPlus();
+        props.getPosts();
+        props.render();
       });
   };
 
