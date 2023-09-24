@@ -30,6 +30,7 @@ export default function PostList() {
     return posts.map((post: any) => (
       <Post
         key={post.id}
+        id={post.id}
         title={post.title}
         body={post.body}
         avatar={post.avatar}
@@ -49,7 +50,7 @@ export default function PostList() {
         <h3>Расскажите миру что-то новое</h3>
       </div>
       {switchPlus ? (
-        <PostForm render={renderPosts} getPosts={getPosts} tapPlus={tapPlus} />
+        <PostForm getPosts={getPosts} tapPlus={tapPlus} />
       ) : null}
 
       {renderPosts()}

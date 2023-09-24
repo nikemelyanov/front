@@ -2,7 +2,7 @@ import styles from './header.module.scss';
 import logoutImg from '../../assets/icons/logout.png';
 import { useNavigate } from 'react-router-dom';
 
-import user from '../../assets/img/7.png';
+import user from '../../assets/images/7.png';
 
 export default function Header(props: any) {
 

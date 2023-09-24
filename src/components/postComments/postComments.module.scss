@@ -1,6 +1,7 @@
 .wrapper {
   min-width: 100%;
   margin-bottom: 50px;
+  padding-left: 30px;
   .header {
     margin-bottom: 10px;
 
@@ -13,9 +14,6 @@
     .author {
       word-wrap: break-word;
       margin: 0px 10px;
-    }
-    .title {
-      font-size: 27px;
     }
   }
   .body {
@@ -33,11 +31,6 @@
     .likes {
       cursor: pointer;
       width: 21px;
-    }
-    .chat {
-      cursor: pointer;
-      width: 21px;
-      margin-left: 10px;
     }
   }
 }
