@@ -5,38 +5,18 @@ import like from '../../assets/icons/like.png';
 import likeActive from '../../assets/icons/likeActive.png';
 import comment from '../../assets/icons/ch.png';
 import commentActive from '../../assets/icons/ch_active.png';
-import PostComments from '../postComments';
-import axios from 'axios';
+import CommentsList from '../commentsList';
 
 export default function Post(props: any) {
   const [liked, setLiked] = React.useState(false);
   const [commentsBtn, setCommentsBtn] = React.useState(false);
-  const [commentsData, setCommentsData] = React.useState([]);
-
-  const loadComments = () => {
-    axios
-      .post('http://localhost:4000/comments/getComments', {
-        postId: props.id,
-      })
-      .then((response) => {
-        setCommentsData(response.data);
-      })
-      .catch((err) => console.error(err));
-  };
 
   function isLiked() {
     setLiked(!liked);
   }
 
-  async function isComments() {
+  function isComments() {
     setCommentsBtn(!commentsBtn);
-    await loadComments();
-  }
-
-  function renderComments() {
-    return commentsData.map((comment: any) => (
-      <PostComments key={comment.id} id={comment.id} body={comment.body} />
-    ));
   }
 
   return (
@@ -70,7 +50,7 @@ export default function Post(props: any) {
           </div>
         </div>
       </div>
-      {commentsBtn ? renderComments() : null}
+      {commentsBtn ? <CommentsList postId={props.id} /> : null}
     </>
   );
 }
