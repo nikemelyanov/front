@@ -29,7 +29,6 @@ export default function PostForm(props: any) {
       .then(() => {
         props.tapPlus();
         props.getPosts();
-        props.render();
       });
   };
 

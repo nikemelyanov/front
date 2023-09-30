@@ -1,5 +1,5 @@
 .main {
-  width: 1440px;
+  max-width: 1440px;
   min-height: 100vh;
   margin: 0 auto;
   border-radius: 30px;
@@ -13,3 +13,16 @@
   display: flex;
 }
 
+@media screen and (max-width: 992px) {
+   
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    .postListContainer {
+      padding-top: 50px;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+}

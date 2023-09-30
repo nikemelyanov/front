@@ -1,5 +1,5 @@
 .wrapper {
-  min-width: 100%;
+  width: 100%;
   margin-bottom: 50px;
   .header {
     margin-bottom: 10px;
@@ -40,4 +40,22 @@
       margin-left: 10px;
     }
   }
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    width: 100%;
+    .header {
+      .title {
+        font-size: 17px;
+      }
+    }
+    .body {
+      font-size: 12px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 576px) {
 }
