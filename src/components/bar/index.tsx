@@ -9,13 +9,11 @@ export default function Bar() {
           <a href="#">Популярные</a>
           <img src={imageFlame} alt="popular" />
         </li>
-        <li className={styles.popular}>
+        <li>
           <a href="#">Вам понравились</a>
-          <img src={imageFlame} alt="popular" />
         </li>
-        <li className={styles.popular}>
+        <li>
           <a href="#">Друзья</a>
-          <img src={imageFlame} alt="popular" />
         </li>
       </ul>
     </div>
