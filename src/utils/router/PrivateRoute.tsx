@@ -1,11 +1,11 @@
 import { Outlet, Navigate } from 'react-router-dom';
 
 export default function PrivateRoute() {
-  let auth = false;
+  let auth = true;
   if (localStorage.getItem('token') !== null) {
     auth = true;
   } else {
-    auth = false;
+    auth = true;
   }
 
   return (
