@@ -14,7 +14,7 @@ export default function PostList() {
   }, []);
 
   const getPosts = () => {
-    let res = axios
+    axios
       .get('http://localhost:4000/posts/getPosts')
       .then((response) => {
         setPosts(response.data);
@@ -49,9 +49,7 @@ export default function PostList() {
         </div>
         <h3>Расскажите миру что-то новое</h3>
       </div>
-      {switchPlus ? (
-        <PostForm getPosts={getPosts} tapPlus={tapPlus} />
-      ) : null}
+      {switchPlus ? <PostForm getPosts={getPosts} tapPlus={tapPlus} /> : null}
 
       {renderPosts()}
     </div>

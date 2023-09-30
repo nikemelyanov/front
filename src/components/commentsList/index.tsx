@@ -8,6 +8,10 @@ export default function CommentsList(props: any) {
   const [commentBody, setCommentBody] = React.useState('');
 
   React.useEffect(() => {
+    getComments();
+  }, []);
+
+  const getComments = () => {
     axios
       .post('http://localhost:4000/comments/getComments', {
         postId: props.postId,
@@ -16,7 +20,7 @@ export default function CommentsList(props: any) {
         setCommentData(response.data);
       })
       .catch((err) => console.error(err));
-  }, []);
+  };
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -35,6 +39,10 @@ export default function CommentsList(props: any) {
           },
         }
       )
+      .then(() => {
+        getComments();
+        setCommentBody('');
+      })
       .catch((error) => {
         console.error(error);
       });
