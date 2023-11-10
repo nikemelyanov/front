@@ -3,13 +3,11 @@ import styles from './header.module.scss';
 import logoutImg from '../../assets/icons/logout.png';
 import { useNavigate } from 'react-router-dom';
 
-import user from '../../assets/images/7.png';
-
 export default function Header(props: any) {
   const [payload, setPayload] = useState({
-    firstname: '',
-    lastname: '',
-    avatar: '',
+    first_name: '',
+    last_name: '',
+    avatar_path: '',
   });
 
   useEffect(() => {
@@ -54,12 +52,12 @@ export default function Header(props: any) {
       <div className={styles.user}>
         <img
           className={styles.avatar}
-          src={`http://localhost:4000/images/${payload.avatar}`}
+          src={`http://localhost:4000/images/${payload.avatar_path}`}
           alt="userImages"
           onClick={navigateToUserPage}
         />
         <div className={styles.userInfo}>
-          {payload.firstname + ' ' + payload.lastname}
+          {payload.first_name + ' ' + payload.last_name}
         </div>
         <img
           className={styles.logout}

@@ -53,10 +53,10 @@ export default function CommentsList(props: any) {
       <Comment
         key={comment.id}
         id={comment.id}
-        body={comment.body}
-        author={comment.author}
-        date={comment.date}
-        avatar={comment.avatar}
+        body={comment.comment_body}
+        author={comment.author_name}
+        date={comment.created_date}
+        avatar={comment.avatar_path}
       />
     ));
   }

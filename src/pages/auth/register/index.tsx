@@ -20,11 +20,11 @@ const RegisterPage = () => {
 
     await axios
       .post('http://localhost:4000/auth/register', {
-        firstname: firstname,
-        lastname: lastname,
+        first_name: firstname,
+        last_name: lastname,
         email: email,
         password: password,
-        avatar: avatar,
+        avatar_path: avatar,
       })
       .catch((error) => {
         console.error(error);

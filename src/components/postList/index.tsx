@@ -31,10 +31,10 @@ export default function PostList() {
       <Post
         key={post.id}
         id={post.id}
-        title={post.title}
-        body={post.body}
-        avatar={post.avatar}
-        author={post.author}
+        title={post.post_title}
+        body={post.post_body}
+        avatar={post.avatar_path}
+        author={post.author_name}
         date={post.date}
       />
     ));
