@@ -1,6 +1,6 @@
 .postForm {
   height: auto;
-  width: 100%;
+  width: 60%;
   margin-bottom: 70px;
 
   display: flex;
@@ -33,4 +33,7 @@
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 576px) {
+  .postForm {
+    width: 100%;
+  }
 }

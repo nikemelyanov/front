@@ -1,5 +1,5 @@
 .wrapper {
-  width: 100%;
+  width: 80%;
   margin-bottom: 50px;
   .header {
     margin-bottom: 10px;
@@ -19,7 +19,9 @@
     }
   }
   .body {
-    line-height: 1.5;
+    p {
+      word-wrap: break-word;
+    }
   }
   .bottom {
     margin-top: 15px;
@@ -27,17 +29,30 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     .date {
       opacity: 0.6;
     }
-    .likes {
-      cursor: pointer;
-      width: 21px;
-    }
-    .chat {
-      cursor: pointer;
-      width: 21px;
-      margin-left: 10px;
+
+    .LikesChatContainer {
+      .likesConteiner {
+        display: flex;
+        p {
+          cursor: default;
+          margin-right: 10px;
+        }
+        .likes {
+          cursor: pointer;
+          width: 21px;
+        }
+      }
+      .comments {
+        cursor: pointer;
+        width: 21px;
+        margin-left: 10px;
+      }
+
+      display: flex;
     }
   }
 }
@@ -58,4 +73,7 @@
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 576px) {
+  .wrapper {
+    width: 100%;
+  }
 }

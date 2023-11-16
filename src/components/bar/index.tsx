@@ -1,5 +1,5 @@
-import styles from './bar.module.scss';
-import imageFlame from '../../assets/icons/flame.png';
+import styles from "./bar.module.scss";
+import imageFlame from "../../assets/icons/flame.png";
 
 export default function Bar() {
   return (
@@ -8,6 +8,10 @@ export default function Bar() {
         <li className={styles.popular}>
           <a href="#">Популярные</a>
           <img src={imageFlame} alt="popular" />
+        </li>
+        <li>
+          <a href="#">Ваши ретвитсы</a>
+          <img />
         </li>
         <li>
           <a href="#">Вам понравились</a>
