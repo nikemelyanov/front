@@ -1,11 +1,11 @@
-import React from 'react';
-import styles from './post.module.scss';
+import React from "react";
+import styles from "./post.module.scss";
 
-import like from '../../assets/icons/like.png';
-import likeActive from '../../assets/icons/likeActive.png';
-import comment from '../../assets/icons/ch.png';
-import commentActive from '../../assets/icons/ch_active.png';
-import CommentsList from '../commentsList';
+import like from "../../assets/icons/like.png";
+import likeActive from "../../assets/icons/likeActive.png";
+import comment from "../../assets/icons/ch.png";
+import commentActive from "../../assets/icons/ch_active.png";
+import CommentsList from "../commentsList";
 
 export default function Post(props: any) {
   const [liked, setLiked] = React.useState(false);
@@ -28,21 +28,28 @@ export default function Post(props: any) {
             src={`http://localhost:4000/images/${props.avatar}`}
             alt="userImages"
           />
-          <p className={styles.author}>{props.author}</p>
+          <p className={styles.author}>
+            {props.user_firstname + " " + props.user_lastname}
+          </p>
           <h1 className={styles.title}>{props.title}</h1>
         </div>
-        <p className={styles.body}>{props.body}</p>
+        <div className={styles.body}>
+          <p>{props.body}</p>
+        </div>
         <div className={styles.bottom}>
           <div className={styles.date}>{props.date}</div>
-          <div>
+          <div className={styles.LikesChatContainer}>
+            <div className={styles.likesConteiner}>
+              <p>{props.likes}</p>
+              <img
+                className={styles.likes}
+                src={liked ? likeActive : like}
+                alt="like"
+                onClick={isLiked}
+              />
+            </div>
             <img
-              className={styles.likes}
-              src={liked ? likeActive : like}
-              alt="like"
-              onClick={isLiked}
-            />
-            <img
-              className={styles.chat}
+              className={styles.comments}
               src={commentsBtn ? commentActive : comment}
               alt="chat"
               onClick={isComments}
@@ -50,7 +57,7 @@ export default function Post(props: any) {
           </div>
         </div>
       </div>
-      {commentsBtn ? <CommentsList postId={props.id} /> : null}
+      {commentsBtn ? <CommentsList post_id={props.post_id} /> : null}
     </>
   );
 }

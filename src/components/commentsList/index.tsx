@@ -11,10 +11,10 @@ export default function CommentsList(props: any) {
     getComments();
   }, []);
 
-  const getComments = () => {
-    axios
+  const getComments = async () => {
+    await axios
       .post('http://localhost:4000/comments/getComments', {
-        postId: props.postId,
+        postId: props.post_id,
       })
       .then((response) => {
         setCommentData(response.data);
@@ -30,8 +30,8 @@ export default function CommentsList(props: any) {
       .post(
         'http://localhost:4000/comments/createComment',
         {
-          commentBody: commentBody,
-          postId: props.postId,
+          body: commentBody,
+          postId: props.post_id,
         },
         {
           headers: {
@@ -53,10 +53,12 @@ export default function CommentsList(props: any) {
       <Comment
         key={comment.id}
         id={comment.id}
-        body={comment.comment_body}
-        author={comment.author_name}
-        date={comment.created_date}
+        body={comment.body}
+        // author={comment.author_id}
         avatar={comment.avatar_path}
+        date={comment.created_at}
+        authorFirstname={comment.first_name}
+        authorLastname={comment.last_name}
       />
     ));
   }
