@@ -38,7 +38,7 @@ export default function PostList() {
         title={post.title}
         body={post.body}
         date={post.created_at}
-        likes={post.like_count}
+        likes={post.like_count} // test
       />
     ));
   }
