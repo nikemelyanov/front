@@ -15,7 +15,7 @@ export default function PostList() {
 
   const getPosts = () => {
     axios
-      .get("http://45.9.41.154:7777/posts/getPosts")
+      .get("https://45.9.41.154:7777/posts/getPosts")
       .then((response) => {
         setPosts(response.data);
       })

@@ -16,7 +16,7 @@ const LoginPage = () => {
     e.preventDefault();
     
     axios
-      .post('http://45.9.41.154:7777/auth/login', {
+      .post('https://45.9.41.154:7777/auth/login', {
         email: email,
         password: password,
       })
