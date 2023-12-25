@@ -28,7 +28,7 @@ export default function CommentsList(props: any) {
     const token = localStorage.getItem('token');
     axios
       .post(
-        'https://45.9.41.154:7777/comments/createComment',
+        'https://retwitzzz.ru/comments/createComment',
         {
           body: commentBody,
           postId: props.post_id,

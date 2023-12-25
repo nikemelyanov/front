@@ -12,7 +12,7 @@ export default function PostForm(props: any) {
     const token = localStorage.getItem('token');
     axios
       .post(
-        'https://45.9.41.154:7777/posts/addPost',
+        'https://retwitzzz.ru/posts/addPost',
         {
           title: title,
           body: body,
