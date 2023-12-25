@@ -52,7 +52,7 @@ export default function Header(props: any) {
       <div className={styles.user}>
         <img
           className={styles.avatar}
-          src={`http://localhost:4000/images/${payload.avatar_path}`}
+          src={`http://45.9.41.154:7777/images/${payload.avatar_path}`}
           alt="userImages"
           onClick={navigateToUserPage}
         />

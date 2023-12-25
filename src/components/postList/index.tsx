@@ -15,7 +15,7 @@ export default function PostList() {
 
   const getPosts = () => {
     axios
-      .get("http://localhost:4000/posts/getPosts")
+      .get("http://45.9.41.154:7777/posts/getPosts")
       .then((response) => {
         setPosts(response.data);
       })
@@ -31,14 +31,15 @@ export default function PostList() {
       <Post
         key={post.id}
         post_id={post.id}
-        user_id={post.user_id}
+        user_id={post.author_id}
         user_firstname={post.first_name}
         user_lastname={post.last_name}
         avatar={post.avatar_path}
         title={post.title}
         body={post.body}
         date={post.created_at}
-        likes={post.like_count} // test
+        likes={post.like_count}
+        // fn={} // test
       />
     ));
   }

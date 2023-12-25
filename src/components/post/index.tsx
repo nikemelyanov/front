@@ -6,6 +6,7 @@ import likeActive from "../../assets/icons/likeActive.png";
 import comment from "../../assets/icons/ch.png";
 import commentActive from "../../assets/icons/ch_active.png";
 import CommentsList from "../commentsList";
+import axios from "axios";
 
 export default function Post(props: any) {
   const [liked, setLiked] = React.useState(false);
@@ -13,6 +14,13 @@ export default function Post(props: any) {
 
   function isLiked() {
     setLiked(!liked);
+
+    axios
+      .post("http://localhost:4000/likes/addLike", {
+        postId: props.post_id,
+        userId: props.user_id,
+      })
+      .catch((err) => console.error(err));
   }
 
   function isComments() {

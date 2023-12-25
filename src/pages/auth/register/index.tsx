@@ -19,7 +19,7 @@ const RegisterPage = () => {
     e.preventDefault();
 
     await axios
-      .post('http://localhost:4000/auth/register', {
+      .post('http://45.9.41.154:7777/auth/register', {
         first_name: firstname,
         last_name: lastname,
         email: email,
