@@ -6,7 +6,7 @@ export default function Comment(props: any) {
       <div className={styles.header}>
         <img
           className={styles.avatar}
-          src={`http://localhost:4000/images/${props.avatar}`}
+          src={`http://retwitzzz.ru/images/${props.avatar}`}
           alt="userImages"
         />
         <p className={styles.author}>{`${props.authorFirstname + ' ' + props.authorLastname}`}</p>

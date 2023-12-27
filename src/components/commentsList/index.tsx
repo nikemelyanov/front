@@ -13,7 +13,7 @@ export default function CommentsList(props: any) {
 
   const getComments = async () => {
     await axios
-      .post('http://45.9.41.154:7777/comments/getComments', {
+      .post('https://retwitzzz.ru/api/comments/getComments', {
         postId: props.post_id,
       })
       .then((response) => {
@@ -28,7 +28,7 @@ export default function CommentsList(props: any) {
     const token = localStorage.getItem('token');
     axios
       .post(
-        'https://retwitzzz.ru/comments/createComment',
+        'https://retwitzzz.ru/api/comments/createComment',
         {
           body: commentBody,
           postId: props.post_id,
