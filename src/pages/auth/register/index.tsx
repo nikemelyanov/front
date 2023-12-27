@@ -19,7 +19,7 @@ const RegisterPage = () => {
     e.preventDefault();
 
     await axios
-      .post('https://retwitzzz.ru/auth/register', {
+      .post('https://retwitzzz.ru/api/auth/register', {
         first_name: firstname,
         last_name: lastname,
         email: email,

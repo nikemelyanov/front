@@ -16,7 +16,7 @@ const LoginPage = () => {
     e.preventDefault();
     
     axios
-      .post('https://retwitzzz.ru/auth/login', {
+      .post('https://retwitzzz.ru/api/auth/login', {
         email: email,
         password: password,
       })
