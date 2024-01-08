@@ -12,15 +12,24 @@ export default function CommentsList(props: any) {
   }, []);
 
   const getComments = async () => {
-    await axios
-      .post('https://retwitzzz.ru/api/comments/getComments', {
-        postId: props.post_id,
-      })
-      .then((response) => {
-        setCommentData(response.data);
-      })
-      .catch((err) => console.error(err));
+    try {
+      const response = await axios.get(`https://retwitzzz.ru/api/comments/getComments?postId=${props.post_id}`);
+      setCommentData(response.data);
+    } catch (err) {
+      console.error(err);
+    }
   };
+
+  // const getComments = async () => {
+  //   await axios
+  //     .post('https://retwitzzz.ru/api/comments/getComments', {
+  //       postId: props.post_id,
+  //     })
+  //     .then((response) => {
+  //       setCommentData(response.data);
+  //     })
+  //     .catch((err) => console.error(err));
+  // };
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();

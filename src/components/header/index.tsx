@@ -18,6 +18,7 @@ export default function Header(props: any) {
         const userPayload = JSON.parse(
           decodeURIComponent(window.atob(tokenParts[1]))
         );
+        console.log(userPayload) // -----------------
         setPayload(userPayload);
       }
     } catch (err) {
