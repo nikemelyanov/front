@@ -15,7 +15,7 @@ export default function PostList() {
 
   const getPosts = () => {
     axios
-      .get("https://retwitzzz.ru/api/posts/getPosts")
+      .get("http://localhost:7777/api/posts/posts")
       .then((response) => {
         setPosts(response.data);
       })

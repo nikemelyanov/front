@@ -16,7 +16,7 @@ export default function Post(props: any) {
     setLiked(!liked);
 
     axios
-      .post("https://retwitzzz.ru/api/likes/addLike", {
+      .post("http://localhost:7777/api/likes/addLike", {
         postId: props.post_id,
         userId: props.user_id,
       })
@@ -33,7 +33,7 @@ export default function Post(props: any) {
         <div className={styles.header}>
           <img
             className={styles.avatar}
-            src={`http://retwitzzz.ru/images/${props.avatar}`}
+            src={`http://localhost:7777/images/${props.avatar}`}
             alt="userImages"
           />
           <p className={styles.author}>

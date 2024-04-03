@@ -9,28 +9,28 @@ export default function Home() {
         <p>Настроить профиль</p>
         <ul>
           <li>
-            <img src={`https://45.9.41.154:7777/images/1.png`} alt="" />
+            <img src={`http://localhost:7777/images/1.png`} alt="" />
           </li>
           <li>
-            <img src={`https://45.9.41.154:7777/images/2.png`} alt="" />
+            <img src={`http://localhost:7777/images/2.png`} alt="" />
           </li>
           <li>
-            <img src={`https://45.9.41.154:7777/images/3.png`} alt="" />
+            <img src={`http://localhost:7777/images/3.png`} alt="" />
           </li>
           <li>
-            <img src={`https://45.9.41.154:7777/images/4.png`} alt="" />
+            <img src={`http://localhost:7777/images/4.png`} alt="" />
           </li>
           <li>
-            <img src={`https://45.9.41.154:7777/images/5.png`} alt="" />
+            <img src={`http://localhost:7777/images/5.png`} alt="" />
           </li>
           <li>
-            <img src={`https://45.9.41.154:7777/images/6.png`} alt="" />
+            <img src={`http://localhost:7777/images/6.png`} alt="" />
           </li>
           <li>
-            <img src={`https://45.9.41.154:7777/images/7.png`} alt="" />
+            <img src={`http://localhost:7777/images/7.png`} alt="" />
           </li>
           <li>
-            <img src={`https://45.9.41.154:7777/images/8.png`} alt="" />
+            <img src={`http://localhost:7777/images/8.png`} alt="" />
           </li>
         </ul>
       </div>

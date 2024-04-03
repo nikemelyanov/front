@@ -13,7 +13,7 @@ export default function CommentsList(props: any) {
 
   const getComments = async () => {
     try {
-      const response = await axios.get(`https://retwitzzz.ru/api/comments/getComments?postId=${props.post_id}`);
+      const response = await axios.get(`http://localhost:7777/api/comments/getComments?postId=${props.post_id}`);
       setCommentData(response.data);
     } catch (err) {
       console.error(err);
@@ -37,7 +37,7 @@ export default function CommentsList(props: any) {
     const token = localStorage.getItem('token');
     axios
       .post(
-        'https://retwitzzz.ru/api/comments/createComment',
+        'http://localhost:7777/api/comments/createComment',
         {
           body: commentBody,
           postId: props.post_id,
